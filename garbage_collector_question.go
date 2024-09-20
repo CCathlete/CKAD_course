@@ -23,7 +23,7 @@ func main() {
 
 		runtime.GC()
 		runtime.ReadMemStats(&mem)
-		fmt.Printf("After getAll(): Alloc = %v MiB, slice: %v\n", mem.Alloc/1024/1024, resOfRes)
+		fmt.Printf("After getAll(): Alloc = %v MiB, slice: %v\n", mem.Alloc/1024/1024, len(resOfRes))
 
 		resOfRes = append(resOfRes, res)
 	}
